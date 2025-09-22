@@ -1,0 +1,41 @@
+import logo from "../assets/munareto.png"; 
+
+export default function Navbar({ irAInicio, alternarBuscador, alternarFiltros }) {
+  return (
+    <header className="bg-gray-900 shadow-lg">
+      <div className="container mx-auto flex items-center justify-between px-6 py-4">
+        
+        <div className="flex items-center cursor-pointer" onClick={irAInicio}>
+          <img
+            src={logo}
+            alt="Munareto Movies"
+            className="h-14 w-14 sm:h-35 sm:w-35 mr-12 transform transition-transform duration-300 hover:scale-110"
+          />
+        </div>
+
+        {/* Botones a la derecha */}
+        <nav className="flex space-x-3 sm:space-x-6">
+          <button
+            onClick={irAInicio}
+            className="px-4 py-2 rounded-full bg-red-600 text-white font-semibold shadow-lg hover:scale-105 transition-transform duration-300"
+          >
+            Populares
+          </button>
+          <button
+            onClick={alternarBuscador}
+            className="px-4 py-2 rounded-full bg-gray-700 text-gray-300 font-semibold hover:bg-gray-600 hover:scale-105 transition-transform duration-300"
+          >
+            Buscar
+          </button>
+          <button
+            onClick={alternarFiltros}
+            className="px-4 py-2 rounded-full bg-gray-700 text-gray-300 font-semibold hover:bg-gray-600 hover:scale-105 transition-transform duration-300"
+          >
+            Filtros
+          </button>
+        </nav>
+
+      </div>
+    </header>
+  );
+}
