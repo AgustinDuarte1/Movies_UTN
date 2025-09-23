@@ -6,12 +6,15 @@ export default function Navbar({ irAInicio, alternarBuscador, alternarFiltros })
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         
         <div className="flex items-center cursor-pointer" onClick={irAInicio}>
-          <img
-            src={logo}
-            alt="Munareto Movies"
-            className="h-14 w-14 sm:h-35 sm:w-35 mr-12 transform transition-transform duration-300 hover:scale-110"
-          />
-        </div>
+    <img
+    src={logo}
+    alt="Munareto Movies"
+    className="h-25 w-25 sm:h-45 sm:w-45 transform transition-transform duration-300 hover:scale-110"
+    />
+    <h1 className="ml-2 text-xl sm:text-3xl font-extrabold tracking-wide bg-gradient-to-r from-cyan-400 via-yellow-400 to-red-500 text-transparent bg-clip-text animate-pulse">
+    Munareto Movies
+    </h1>
+    </div>
 
         {/* Botones a la derecha */}
         <nav className="flex space-x-3 sm:space-x-6">
